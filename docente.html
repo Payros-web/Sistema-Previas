@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción de Docente</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Escudo Colegio" class="logo-img">
+                <span>Sistema Previas</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="alumno.html">Alta Alumnos</a></li>
+                <li><a href="docente.html" class="active">Alta Docentes</a></li>
+                <li><a href="seguimiento.html">Seguimiento</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card">
+        <h2>Registro de Docente</h2>
+        <p class="subtitulo">Datos del profesor responsable</p>
+
+        <form id="docenteForm">
+            <label for="dni_docente">DNI del Docente:</label>
+            <input type="text" id="dni_docente" name="dni_docente" placeholder="Ej: 30123456" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ej: Gómez" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: María" required>
+
+            <label for="materia">Materia a Cargo:</label>
+            <input type="text" id="materia" name="materia" placeholder="Ej: Matemática" required>
+
+            <button type="submit">Guardar Docente</button>
+
+            <!-- Mensajes de respuesta -->
+            <p id="mensajeExito" style="display:none; color: green; font-weight: bold; margin-top: 10px;"></p>
+            <p id="mensajeError" style="display:none; color: red; font-weight: bold; margin-top: 10px;"></p>
+        </form>
+    </div>
+
+    <!-- Librería cliente de Supabase y Script local -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="docente.js"></script>
+
+</body>
+
+</html>

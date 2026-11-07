@@ -1,0 +1,305 @@
+
+/* --- CONFIGURACIÓN GENERAL --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Fondo semi transparente sobre la imagen del colegio */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.45)), url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Centrado del contenido */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 100px; /* Espacio para la barra de navegación */
+    padding-bottom: 40px;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+    background-color: #5b88d0; /* Fondo oscuro del formulario */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #7ba6e3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #f0f1f2;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.logo-img {
+    height: 20px;
+    width: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    display: inline-block;
+    color: #f0f1f2;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-menu li a:hover {
+    color: #ffffff;
+    background-color: #0d4088;
+}
+
+.nav-menu li a.active {
+    background-color:  #7c9fd6;
+    color: #ffffff;
+    
+}
+
+/* --- TARJETA DEL FORMULARIO EN GRIS OSCURO --- */
+.card {
+    background-color: #1e293b; /* Gris oscuro / Slate */
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* Sombra intensa para realzar */
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff; /* Texto del título en blanco */
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+
+h3 {
+    text-align: center;
+    color: #128540; /* Texto del título en blanco */
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+
+.subtitulo {
+    text-align: center;
+    color: #94a3b8; /* Subtítulo en gris claro */
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* --- ELEMENTOS DEL FORMULARIO --- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: 13px;
+    color: #e2e8f0; /* Etiquetas en blanco suave */
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px;
+    background-color: #0f172a; /* Fondo más oscuro para los campos */
+    color: #ffffff; /* Texto tipeado en blanco */
+    border: 1px solid #475569;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Texto de ayuda (placeholder) */
+input::placeholder, textarea::placeholder {
+    color: #64748b;
+}
+
+/* Al hacer foco en un campo */
+input:focus, select:focus, textarea:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+}
+
+/* Opciones del menú desplegable */
+select option {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+
+/* Botón principal del formulario */
+button {
+    margin-top: 24px;
+    padding: 13px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Cambio de color al pasar el mouse */
+button:hover {
+    background-color: #218838;
+}
+
+/* Texto legible para la tarjeta de bienvenida */
+.bienvenida-texto {
+    color: #e2e8f0; /* Blanco suave totalmente visible */
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Etiqueta de inicio*/
+.card-inicio {
+    
+    background-color: rgba(72, 96, 137, 0.85); 
+        margin-top: 150px;
+        max-width: 550px; 
+        border: none;
+}
+
+
+/* --- ESTILOS EXCLUSIVOS PARA PÁGINAS DE REPORTES --- */
+
+body.pagina-reportes {
+  background-image: none;
+  background-color: #f1f5f9; /* Gris azulado muy limpio */
+  color: #333333;
+}
+
+body.pagina-reportes h1,
+body.pagina-reportes h2,
+body.pagina-reportes p {
+  color: #1a252f;
+}
+
+.contenedor-reportes {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.marco-reporte {
+  width: 90%;
+  max-width: 1200px;
+  height: 650px; 
+  margin: 0 auto;
+  border: 2px solid #28a745;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+}
+
+.marco-reporte iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+}
+
+/* --- CENTRO DE REPORTES  --- */
+.contenedor-principal {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  color: #fffefe ;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.subtitulo-seccion {
+  color: #fffefe;
+  font-size: 1rem;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+/* --- TARJETAS DE REPORTES --- */
+.grilla-reportes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta-opcion {
+    background-color: #e8e3d1;
+    border: 2px solid #ccc;
+    height:200px;
+    margin-top: 30px;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-decoration: none;
+    color: #333333;
+    text-align: center;
+}
+
+
+.tarjeta-opcion:hover {
+    border: 5px solid #27ae60;
+    background-color: #f9f9f9;
+}
+
+
+.tarjeta-opcion h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 18x;
+}
+
+.tarjeta-opcion p {
+    color: #666666;
+    font-size: 14px;
+    margin: 10px;
+}

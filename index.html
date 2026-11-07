@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Previas por Parciales</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.jpg" alt="Escudo Colegio" class="logo-img">
+                <span>Sistema Previas</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- TARJETA  -->
+
+    <main class="card card-inicio">
+        <h2>Iniciar Sesión</h2>
+        <p class="subtitulo">Colegio N° 2 D.E. 1 Domingo F. Sarmiento</p>
+
+        <form id="loginForm" class="form-login">
+            <div class="input-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Ingrese su Usuario">
+            </div>
+
+            <div class="input-group">
+                <label for="clave">Contraseña</label>
+                <input type="password" id="clave" name="clave" required placeholder="••••••••">
+            </div>
+
+            <button type="submit" class="btn-submit">Ingresar</button>
+
+            <p id="mensajeError" class="error-msg" style="display:none; color: red; margin-top: 10px;"></p>
+        </form>
+    </main>
+
+    <!-- Librería cliente de Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>
